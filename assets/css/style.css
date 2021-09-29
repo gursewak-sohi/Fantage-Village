@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    font-family: 'Noto Serif JP', serif;
+    font-family: source-han-sans-japanese, sans-serif;
+    font-weight: 400;
     color: #fff;
     background-image: url(../images/main_bg.jpg);
     background-position: top center;
@@ -29,16 +31,10 @@ ul {
 }
 
 .h1 {
-    font-size: 127px;
-    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+    font-family: source-han-sans-japanese, sans-serif;
     line-height: 100%;
     text-shadow: 0px 5px 0px rgba(5, 28, 39, 0.3);
-}
-
-.h4 {
-    font-size: 34px;
-    line-height: 100%;
-    font-weight: 600;
 }
 
 .h2 {
@@ -51,7 +47,7 @@ ul {
 .h3 {
     font-size: 48px;
     line-height: 100%;
-    font-weight: 500;
+    font-weight: 700;
     color: #25759a;
     text-align: center;
     margin-bottom: 27px;
@@ -60,13 +56,12 @@ ul {
 .h4 {
     font-size: 30px;
     line-height: 48px;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .p {
     font-size: 16px;
-    line-height: 100%;
+    line-height: 24px;
 }
 
 a:hover {
@@ -183,7 +178,7 @@ a:hover {
 
 .product-content h2 {
     position: relative;
-    margin-top: 120px;
+    margin-top: 250px;
     margin-left: -90px;
 }
 
@@ -454,6 +449,7 @@ a:hover {
     font-size: 30px;
     line-height: 48px;
     margin-bottom: 38px;
+    font-weight: 700;
 }
 
 .shop {
@@ -481,7 +477,7 @@ a:hover {
     width: 1920px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 145px;
+    bottom: 445px;
     z-index: -1;
 }
 
@@ -512,19 +508,19 @@ a:hover {
     width: 681px;
     height: 795px;
     left: -120px;
-    top: 125px;
+    top: 165px;
 }
 
 .shop-paragraph h4 {
     font-size: 24px;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .shop-paragraph p {
     font-size: 16px;
     line-height: 30px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .shop-paragraph {
@@ -556,14 +552,14 @@ a:hover {
     width: 681px;
     height: 843px;
     right: -146px;
-    bottom: -337px;
+    bottom: -287px;
 }
 
 .shop-left-2 {
     position: relative;
     padding-left: 471px;
     padding-right: 105px;
-    margin-bottom: 55px;
+    margin-bottom: 113px;
 }
 
 .shop-left-2::before {
@@ -573,12 +569,12 @@ a:hover {
     width: 275px;
     height: 495px;
     left: 168px;
-    bottom: -62px;
+    bottom: -105px;
 }
 
 .shop-right-2 {
     padding-left: 99px;
-    padding-right: 420px;
+    padding-right: 360px;
     position: relative;
 }
 
@@ -588,8 +584,8 @@ a:hover {
     background-image: url(../images/shop4.png);
     width: 527px;
     height: 607px;
-    right: -87px;
-    bottom: -174px;
+    right: -128px;
+    bottom: -218px;
 }
 
 .button {
@@ -612,11 +608,12 @@ a:hover {
 
 .acril-content h4 {
     margin-top: 23px;
+    font-weight: 700;
 }
 
 .btn-p {
-    margin-top: -15px;
-    margin-bottom: 25px;
+    margin-top: -10px;
+    margin-bottom: 65px;
     font-size: 16px;
     font-weight: 200;
 }
@@ -631,7 +628,7 @@ a:hover {
 }
 
 .corona {
-    padding-top: 570px;
+    padding-top: 633px;
     position: relative;
 }
 
@@ -653,7 +650,7 @@ a:hover {
     background-image: url(../images/cartoonbg.png);
     width: 1920px;
     height: 1319px;
-    bottom: -370px;
+    bottom: -160px;
     z-index: -2;
     left: 50%;
     transform: translateX(-50%);
@@ -693,7 +690,7 @@ a:hover {
     background-image: url(../images/corona1.png);
     width: 341px;
     height: 642px;
-    bottom: -84px;
+    bottom: -135px;
     right: -91px;
 }
 
@@ -712,7 +709,8 @@ a:hover {
     font-size: 48px;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 38px;
+    margin-bottom: 67px;
+    margin-top: 30px;
 }
 
 .corona-inner>p {
@@ -730,10 +728,21 @@ a:hover {
     padding: 0 175px 0 55px;
 }
 
+.listing p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
 .listing h4 {
     font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 21px;
+    font-weight: 400;
+    margin-bottom: 33px;
+}
+
+.listing ul li h5 {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .listing ul {
@@ -757,7 +766,7 @@ a:hover {
 }
 
 .stacked-text {
-    margin: 60px 60px 9px;
+    margin: 60px 60px 61px;
     max-width: 754px;
     font-size: 16px;
     line-height: 30px;
@@ -777,4 +786,12 @@ footer {
 footer p {
     font-size: 12px;
     font-weight: 300;
+}
+
+.button-secondary {
+    display: block;
+    position: relative;
+    margin-top: 70px;
+    left: -30px;
+    animation: pulse infinite 2s forwards;
 }
