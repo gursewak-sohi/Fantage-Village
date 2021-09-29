@@ -3,6 +3,12 @@
      -moz-osx-font-smoothing: grayscale;
  }
  
+ html,
+ body {
+     max-width: 100%;
+     overflow-x: hidden;
+ }
+ 
  body {
      font-family: source-han-sans-japanese, sans-serif;
      font-weight: 400;
@@ -1149,7 +1155,8 @@
      }
      .h1 {
          font-size: 51px;
-         margin-top: 20px;
+         margin-top: 11px;
+         margin-bottom: 10px;
      }
      .title-content h4 {
          font-size: 21px;
