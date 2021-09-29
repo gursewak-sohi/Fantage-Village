@@ -8,9 +8,102 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background: rgb(43, 189, 223);
+            background: linear-gradient(101deg, rgba(43, 189, 223, 1) 0%, rgba(33, 113, 150, 1) 100%);
+            visibility: hidden;
+            z-index: 9999;
+            transform: translateY(-100%);
+        }
+        
+        .page-loading.active {
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #fff;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #fff;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+    </script>
 </head>
 
 <body>
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div>
+            <span>Loading...</span>
+        </div>
+    </div>
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -45,13 +138,17 @@
         <div class="container">
             <div class="product-content">
                 <div>
-                    <img class="img-fluid" src="assets/images/product1.png" alt="product" />
+                    <img class="product-img img-fluid" src="assets/images/product1.png" alt="product" />
                 </div>
                 <div>
                     <h2 class="h2">HoYo FEST開催期間中</h2>
                     <div class="text-center">
-                        <a href="javascript" class="button-secondary">
-                            <img src="assets/images/button2.png" alt="button" />
+                        <a href="https://passmarket.yahoo.co.jp/seller/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEfantasy%20village/Xk7a1vC2I6SNIxI_xA6yItdUzXOxsoRi7RhcJr_buRVePvbG00/" class="button-secondary">
+                            <div>
+                                <span>予約サイトはこちら</span>
+                                <img class="img-fluid" src="assets/images/button.png" alt="button" />
+                            </div>
+
                         </a>
                     </div>
                 </div>
@@ -121,14 +218,24 @@
                 <div class="light-box light-box-1">
                     <h3>HoYo FEST原神 缶バッジセット</h3>
                     <div class="mark-content-3">
-                        <img class="img-fluid" src="assets/images/mark1.png" alt="mark" />
-                        <img class="img-fluid" src="assets/images/mark2.png" alt="mark" />
-                        <img class="img-fluid" src="assets/images/mark3.png" alt="mark" />
+                        <div>
+                            <img class="img-fluid" src="assets/images/mark1.png" alt="mark" />
+                        </div>
+                        <div>
+                            <img class="img-fluid" src="assets/images/mark2.png" alt="mark" />
+                        </div>
+                        <div>
+                            <img class="img-fluid" src="assets/images/mark3.png" alt="mark" />
+                        </div>
+
+
+
                     </div>
                 </div>
                 <div class="light-box light-box-2">
                     <h3>HoYo FEST未定事件簿 缶バッジセット</h3>
                     <div class="mark-content-2">
+
                         <img class="img-fluid" src="assets/images/mark7.png" alt="mark" />
                         <img class="img-fluid" src="assets/images/mark8.png" alt="mark" />
                         <img class="img-fluid" src="assets/images/mark9.png" alt="mark" />
@@ -138,9 +245,9 @@
                 <div class="light-box light-box-3">
                     <h3>HoYo FEST崩壊3rd 缶バッジセット</h3>
                     <div class="mark-content-3">
-                        <img class="img-fluid" src="assets/images/mark4.png" alt="mark" />
-                        <img class="img-fluid" src="assets/images/mark5.png" alt="mark" />
-                        <img class="img-fluid" src="assets/images/mark6.png" alt="mark" />
+                        <div><img class="img-fluid" src="assets/images/mark4.png" alt="mark" /></div>
+                        <div> <img class="img-fluid" src="assets/images/mark5.png" alt="mark" /></div>
+                        <div> <img class="img-fluid" src="assets/images/mark6.png" alt="mark" /></div>
                     </div>
                 </div>
             </div>
@@ -272,8 +379,11 @@
 
                 </div>
                 <div class="text-center">
-                    <a class="button" href="javascript:;">
-                        <img src="assets/images/button.png" alt="button" />
+                    <a class="button" href="https://passmarket.yahoo.co.jp/seller/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEfantasy%20village/Xk7a1vC2I6SNIxI_xA6yItdUzXOxsoRi7RhcJr_buRVePvbG00/">
+                        <div>
+                            <span>チケット抽選申込はこちら</span>
+                            <img class="img-fluid" src="assets/images/button.png" alt="button" />
+                        </div>
                     </a>
                     <p class="btn-p">※抽選へのお申込には「Yahoo!ID」が必要です。
 
@@ -312,12 +422,14 @@
                         </ul>
                     </div>
                     <div class="stacked-text">
+
                         *ご来店される際はマスクの着用をお願いいたします。着用されていない場合はご入店をお断りさせて <br> 頂く場合がございます。 *発熱・咳・全身痛などの症状がある場合は、ご来店を自粛頂きますようお願いいたします。
-                        <br> *発熱や体調が優れないお客様は、ご来店頂いてもご入店をお断りさせて頂く場合がございますので、
-                        <br> 予めご了承ください。
+                        <br> *発熱や体調が優れないお客様は、ご来店頂いてもご入店をお断りさせて頂く場合がございますので、 予めご了承ください。
+
                         <br> 今後も感染拡大の状況を鑑み、お客さま、スタッフ、ならびに関係各所のみなさまの安心・
-                        <br> 安全確保を目的に、感染リスク軽減に努めてまいります。
-                        <br> ご協力を賜りますよう、何卒宜しくお願い申し上げます。
+                        <div class="padded">
+                            安全確保を目的に、感染リスク軽減に努めてまいります。
+                            <br> ご協力を賜りますよう、何卒宜しくお願い申し上げます。</div>
                     </div>
                 </div>
             </div>
